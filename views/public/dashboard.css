@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 * {
   box-sizing: border-box;
@@ -12,10 +13,8 @@
 }
 
 .chatbox-container {
-  width: 60%;
-  margin: 100px auto;
+  width: 100%;
   background-color: white;
-  height: 700px;
   padding: 5px;
 }
 
@@ -47,14 +46,147 @@
 .chat-box {
   position: relative;
   top: 0;
-  display: flex;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 15% 1% 84%;
 }
 
 #horizontal-line{
   width: 100%;
-  background-color: grey;
+  background-color: wheat;
   height: 1px;
   margin-top: 10px;
 }
+
+
+
+#chatroom-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
+ul.a {
+  list-style-type: none;
+}
+
+.chat-vertical-line {
+  width: 1px;
+  background-color: wheat;
+  height: auto;
+}
+
+#left-sidebar {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+  height: 93vh;
+  overflow: auto;
+}
+
+
+/* chat message div */
+
+#right-sidebar{
+  padding: 20px 0px;
+  height: 93vh;
+}
+
+.send-button{
+  z-index: 100%;
+  display: flex;
+}
+
+.message-collection{
+  height: 88vh;
+  overflow: auto;
+}
+
+
+.message{
+  /* background-color: blueviolet; */
+  padding: 10px;
+  color: white;
+  width: 60%;
+  line-height: 1.8;
+  margin: 20px 0px;
+  border-radius: 1%;
+  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+}
+
+.message1{
+  padding: 10px;
+  color: white;
+  width: 60%;
+  line-height: 1.8;
+  margin: 20px 0px;
+  border-radius: 1%;
+  margin-left: 39%;
+  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+}
+
+#message-username{
+  font-size: 0.9rem;
+  color: white;
+  text-decoration: underline;
+}
+
+#message-content{
+  font-size: 1rem;
+}
+
+
+@media screen and (max-width: 900px) {
+  .chat-box{
+    display: flex;
+    padding: 0px;
+  }
+
+  .chat-vertical-line{
+    display: none;
+  }
+
+  #left-sidebar {
+    display: none;
+    padding: 0px;
+  }
+
+
+  .message-collection{
+    height: 84vh;
+    overflow: scroll;
+  }
+
+  .message1{
+    padding: 0px;
+    width: 80%;
+  }
+
+  .send-button{
+    z-index: 100%;
+    display: flex;
+    padding: 0px;
+  }
+
+  #right-sidebar{
+    padding: 0px;
+    height: 95vh;
+  }
+
+  .message1{
+    margin: 10px 0px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .message{
+    margin: 10px 0px;
+    width: 100%;
+  }
+
+  .chatbox-container {
+    padding: 0px;
+  }
+}
+
+
 

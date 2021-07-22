@@ -42,11 +42,11 @@ form div {
   padding: 10px;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 1100px) {
   /* login form div */
   .login-form {
     height: auto;
-    width: 80%;
+    width: 95%;
     margin: 50px auto;
     background-color: white;
     display: grid;
@@ -56,7 +56,7 @@ form div {
 
   /* login form side image */
   #chat-img img {
-    width: 60%;
+    width: 30%;
     height: 150px;
     border-radius: 50%;
     margin: auto;
