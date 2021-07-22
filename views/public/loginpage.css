@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400&display=swap");
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-image: linear-gradient(to right, #a1c4fd 0%, #c2e9fb 100%);
+}
+
+/* login form div */
+.login-form {
+  height: 500px;
+  width: 40%;
+  margin: 200px auto;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 80px;
+  box-shadow: 0 20px 10px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 1%;
+}
+
+/* login form title */
+.login-form p {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* login form side image */
+#chat-img img {
+  width: 90%;
+  height: 300px;
+  border-radius: 50%;
+}
+
+/* main login form input field div */
+form div {
+  padding: 10px;
+}
+
+@media screen and (max-width: 900px) {
+  /* login form div */
+  .login-form {
+    height: auto;
+    width: 80%;
+    margin: 50px auto;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 20px;
+  }
+
+  /* login form side image */
+  #chat-img img {
+    width: 60%;
+    height: 150px;
+    border-radius: 50%;
+    margin: auto;
+    display: block;
+  }
+}
