@@ -35,9 +35,8 @@ socket.on("onlineUsersClient", (users) => {
   // adding new users in the active list.
   let div = document.getElementById("active-users");
   div.innerHTML = `
-   ${users.map((user) => `<li>${user.username}</li>`)}`;
+   ${users.map((user) => `<li>${user}</li>`).join('')}`;
 });
-
 
 // adding new node in the dom for new chat message.
 const addNode = (message) => {
@@ -56,9 +55,3 @@ const addNode = (message) => {
   const msgCollection = document.querySelector(".message-collection");
   msgCollection.append(div);
 };
-
-// receiving active user list from server.
-socket.on("activeUsersClient", (users) => {
-  // list of active users.
-  onlineUsers(users);
-});

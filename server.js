@@ -48,7 +48,10 @@ io.on("connection", (socket) => {
 
     //get online users.
     const onlineUsers = online_users(user.room);
-    io.to(user.room).emit("onlineUsersClient", onlineUsers);
+    const onlineUsersName = onlineUsers.map((user) => {
+      return user.username;
+    });
+    io.to(user.room).emit("onlineUsersClient", onlineUsersName);
   });
 
   // listening message from clients.
@@ -60,7 +63,6 @@ io.on("connection", (socket) => {
       messageFormat(msg.username, msg.text)
     );
   });
-  
 
   // runs when user disconnect.
   socket.on("disconnect", () => {
