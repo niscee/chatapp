@@ -15,14 +15,15 @@
 .chatbox-container {
   width: 100%;
   background-color: white;
-  padding: 5px;
+  padding: 4px;
+  background-image: linear-gradient(to top, #fff1eb 0%, #ace0f9 100%);
 }
 
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
+  padding: 0px;
   height: 50px;
   position: absolute;
   bottom: 0;
@@ -47,16 +48,15 @@
   position: relative;
   top: 0;
   display: grid;
-  grid-template-columns: 15% 1% 84%;
+  grid-template-columns: 12% 0.5% 87.5%;
 }
 
 #horizontal-line{
   width: 100%;
-  background-color: wheat;
+  background-color: whitesmoke;
   height: 1px;
   margin-top: 10px;
 }
-
 
 
 #chatroom-title {
@@ -65,19 +65,19 @@
   padding-top: 10px;
 }
 
+
 ul.a {
   list-style-type: none;
 }
 
+
 .chat-vertical-line {
   width: 1px;
-  background-color: wheat;
+  background-color: whitesmoke;
   height: auto;
 }
 
 #left-sidebar {
-  display: flex;
-  justify-content: space-between;
   padding: 0px 20px;
   height: 93vh;
   overflow: auto;
@@ -85,49 +85,62 @@ ul.a {
 
 
 /* chat message div */
-
 #right-sidebar{
-  padding: 20px 0px;
-  height: 93vh;
+  position: relative;
 }
 
 .send-button{
+  display: grid;
+  grid-template-columns: 80% 20%;
+  position: absolute;
+  bottom: 0px;
   z-index: 100%;
-  display: flex;
 }
 
+
+
 .message-collection{
-  height: 88vh;
   overflow: auto;
+  height: 88vh;
+  margin: 0.3% 0%;
 }
 
 
 .message{
-  /* background-color: blueviolet; */
   padding: 10px;
-  color: white;
+  color: black;
   width: 60%;
   line-height: 1.8;
   margin: 20px 0px;
   border-radius: 1%;
-  background-image: linear-gradient(to right, #868f96 0%, #596164 100%);
+  background-color: lightblue; 
 }
 
 .message1{
   padding: 10px;
-  color: white;
+  color: black;
   width: 60%;
   line-height: 1.8;
   margin: 20px 0px;
   border-radius: 1%;
   margin-left: 39%;
-  background-image: linear-gradient(to right, #243949 0%, #517fa4 100%);
+  background-color: lightgreen;
+}
+
+.messageadmin{
+  padding: 10px;
+  color: black;
+  width: 60%;
+  line-height: 1.8;
+  margin: 20px 0px;
+  border-radius: 1%;
+  margin-left: 39%;
+  background-color: lightyellow;
 }
 
 #message-username{
   font-size: 0.9rem;
-  color: white;
-  text-decoration: underline;
+  color: black;
 }
 
 #message-content{
@@ -137,7 +150,7 @@ ul.a {
 
 @media screen and (max-width: 900px) {
   .chat-box{
-    display: flex;
+    grid-template-columns: 100%;
     padding: 0px;
   }
 
@@ -150,9 +163,7 @@ ul.a {
     padding: 0px;
   }
 
-
   .message-collection{
-    height: 84vh;
     overflow: scroll;
   }
 
@@ -162,17 +173,25 @@ ul.a {
   }
 
   .send-button{
-    z-index: 100%;
     display: flex;
     padding: 0px;
+    position: absolute;
+    bottom: 0%;
+
   }
 
   #right-sidebar{
     padding: 0px;
-    height: 95vh;
+    height: 91vh;
   }
 
   .message1{
+    margin: 10px 0px;
+    width: 100%;
+    padding: 10px;
+  }
+
+  .messageadmin{
     margin: 10px 0px;
     width: 100%;
     padding: 10px;

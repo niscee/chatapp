@@ -9,8 +9,9 @@
     <!-- CSS only -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>Dashboard</title>
+    <title>ChatBoard</title>
 </head>
+
 
 <body id="body">
 
@@ -23,7 +24,7 @@
                     <p>ChatBoard</p>
                 </span>
             </div>
-            <a href=""><button class="btn btn-primary">Leave Room</button></a>
+            <a href="./index.html"><button class="btn btn-danger">Leave Room</button></a>
         </nav>
         <!-- navigation bar ends -->
 
@@ -35,44 +36,10 @@
         <section class="chat-box">
 
             <div id="left-sidebar">
-                <div>
-                    <p id="chatroom-title">Room (Sports)</p>
-                    <p id="chatroom-title">User List</p>
-                    <p>Messi</p>
-                    <p>Ronaldo</p>
-                    <p>Lord Abshishek</p>
-                    <p>Zidane</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    <p>Prayoga</p>
-                    <p>Sachin</p>
-                    <p>Ujjwal</p>
-                    
-                </div>
+                <p id="chatroom-title">Room (Sports)</p>
+                <p id="chatroom-title">Active User List</p>
+
+                <div id="active-users"></div>
             </div>
 
             <div class="chat-vertical-line"></div>
@@ -82,110 +49,15 @@
             <div id="right-sidebar">
 
                 <div class="message-collection">
-                    <div class="message">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.</p>
-                    </div>
 
-                    <div class="message1">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.
-
-                            If you would like to use the local version of the client-side JS file, you can find it at
-                            node_modules/socket.io/client-dist/socket.io.js.
-
-                            Notice that I’m not specifying any URL when I call io(), since it defaults to trying to
-                            connect
-                            to the host that serves the page.
-
-                            If you now restart the process (by hitting Control+C and running node index.js again) and
-                            then
-                            refresh the webpage you should see the console print “a user connected”.
-
-                            Try opening several tabs, and you’ll see several messages.</p>
-                    </div>
-
-                    <div class="message">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.
-
-                            If you would like to use the local version of the client-side JS file, you can find it at
-                            node_modules/socket.io/client-dist/socket.io.js.
-
-                            Notice that I’m not specifying any URL when I call io(), since it defaults to trying to
-                            connect
-                            to the host that serves the page.
-
-                            If you now restart the process (by hitting Control+C and running node index.js again) and
-                            then
-                            refresh the webpage you should see the console print “a user connected”.
-
-                            Try opening several tabs, and you’ll see several messages.</p>
-                    </div>
-
-
-                    <div class="message1">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.
-
-                            If you would like to use the local version of the client-side JS file, you can find it at
-                            node_modules/socket.io/client-dist/socket.io.js.
-
-                            Notice that I’m not specifying any URL when I call io(), since it defaults to trying to
-                            connect
-                            to the host that serves the page.
-
-                            If you now restart the process (by hitting Control+C and running node index.js again) and
-                            then
-                            refresh the webpage you should see the console print “a user connected”.
-
-                            Try opening several tabs, and you’ll see several messages.</p>
-                    </div>
-
-                    <div class="message">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.
-
-                            If you would like to use the local version of the client-side JS file, you can find it at
-                            node_modules/socket.io/client-dist/socket.io.js.
-
-                            Notice that I’m not specifying any URL when I call io(), since it defaults to trying to
-                            connect
-                            to the host that serves the page.
-
-                            If you now restart the process (by hitting Control+C and running node index.js again) and
-                            then
-                            refresh the webpage you should see the console print “a user connected”.
-
-                            Try opening several tabs, and you’ll see several messages.</p>
-                    </div>
-
-
-                    <div class="message1">
-                        <p id="message-username">nischal</p>
-                        <p id="message-content">That’s all it takes to load the socket.io-client, which exposes an io
-                            global
-                            (and the endpoint GET /socket.io/socket.io.js), and then connect.
-                        </p>
-                    </div>
                 </div>
 
 
                 <!-- button start -->
-                <section class="send-button">
-                    <input type="text" name="msg" class="form-control">
-                    <button class="btn btn-primary">send</button>
-                </section>
+                <div class="send-button" style="width: 100%">
+                    <input type="text" id="chat-message" class="form-control">
+                    <button class="btn btn-success" id="send-message">send</button>
+                </div>
                 <!-- button ends -->
 
 
@@ -198,6 +70,18 @@
         </section>
 
     </div>
+
+
+    <!-- for accessing url parameter -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qs/6.10.1/qs.min.js"
+        integrity="sha512-aTKlYRb1QfU1jlF3k+aS4AqTpnTXci4R79mkdie/bp6Xm51O5O3ESAYhvg6zoicj/PD6VYY0XrYwsWLcvGiKZQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <!-- linking socketio -->
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="./public/javascript/main.js"></script>
+
+
 
 </body>
 
