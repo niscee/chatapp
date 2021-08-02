@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-const PORT = 8000 || process.env.PORT;
+const PORT = process.env.PORT || 8000;
 
 const http = require("http");
 const { userInfo } = require("os");
